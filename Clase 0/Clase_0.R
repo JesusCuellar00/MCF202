@@ -31,3 +31,5 @@ var(diametro)
 boxplot(diametro, horizontal = TRUE, col="lightblue", main="diámetro", 
         xlab="D (cm)")
 hist(diametro)
+
+
