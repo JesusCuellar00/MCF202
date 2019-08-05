@@ -43,4 +43,8 @@ boxplot(DB_alturas$crecimiento)
 boxplot(DB_alturas$crecimiento ~ DB_alturas$tratamiento, col="green",
         xlab="Tratamiento", ylab="Crecimiento (cm)",
         main="Efectos del fertilizante" )
+mean(DB_alturas$crecimiento)
 
+# Restricciones -----------------------------------------------------------
+
+sum(DB_alturas$crecimiento < mean(DB))
