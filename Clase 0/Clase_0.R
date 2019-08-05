@@ -47,4 +47,11 @@ mean(DB_alturas$crecimiento)
 
 # Restricciones -----------------------------------------------------------
 
-sum(DB_alturas$crecimiento < mean(DB))
+sum(DB_alturas$crecimiento < mean(DB_alturas$crecimiento))
+
+# Excluir tratamiento A ---------------------------------------------------
+
+
+TratA <- DB_alturas[!(DB_alturas$tratamiento=="TA"),]
+
+mean(TratA$crecimiento)
