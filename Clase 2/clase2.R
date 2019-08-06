@@ -35,5 +35,10 @@ op <- par(mfrow=c(1,2), cex.axis=.7,  cex.lab=.9)
 boxplot(vivero$IE ~ vivero$Tratamiento, col="grey", main="A")
 barplot(tapply(vivero$IE, list(vivero$Tratamiento), mean ), beside=T, main="B")
 
+# Paried t-test -----------------------------------------------------------
+
+test.tiempo <- t.test(vivero$IE ~ vivero$Tratamiento, paired=TRUE)
+test.tiempo
+
 
 
