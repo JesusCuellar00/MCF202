@@ -43,3 +43,7 @@ dbh500 <- rnorm(500)
 hist(dbh500)
 dbh1000 <- rnorm(1000)
 hist(dbh1000)
+
+shapiro.test(dbh)
+
+
