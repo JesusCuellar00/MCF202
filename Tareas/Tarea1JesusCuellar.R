@@ -53,15 +53,15 @@ hist(H16$Altura, col="aquamarine", main="Alturas < 16.5")
 # Histogramas vecinos -----------------------------------------------------
 
 
-hist(conjunto$Vecinos, col="green", main="Altura")
-hist(Vecinos3$Vecinos, col="lightblue", main="Alturas <= Media")
-hist(Vecinos4$Vecinos, col="aquamarine", main="Alturas < 16.5")
+hist(conjunto$Vecinos, col="green", main="Vecinos")
+hist(Vecinos3$Vecinos, col="lightblue", main="Vecinos <= 3")
+hist(Vecinos4$Vecinos, col="aquamarine", main="Vecinos > 4")
 
 # histogramas diametro ----------------------------------------------------
 
 hist(conjunto$Diametro, col="green", main="Altura")
-hist(DBHmedia$Diametro, col="lightblue", main="Alturas <= Media")
-hist(DBH16$Diametro, col="aquamarine", main="Alturas < 16.5")
+hist(DBHmedia$Diametro, col="lightblue", main="Diametro < Media")
+hist(DBH16$Diametro, col="aquamarine", main="Diametro > 16")
 
 # estadisticas basicas Altura ---------------------------------------------
 
