@@ -24,7 +24,7 @@ boxplot(vivero$IE ~ vivero$Tratamiento, col="orange",
 
 # Prueba muestras independientes --------------------------------------------------
 
-var.test(ivero$IE ~ vivero$Tratamiento)
+var.test(vivero$IE ~ vivero$Tratamiento)
 
 t.test(vivero$IE ~ vivero$Tratamiento, var.equal=T)
 #Existe una diferencia significativa entre el indice de esbeltes de las plantulas con fertilizante y las que no
