@@ -32,7 +32,7 @@ t.test(vivero$IE ~ vivero$Tratamiento, var.equal=T)
 
 
 op <- par(mfrow=c(1,2), cex.axis=.7,  cex.lab=.9)
-boxplot(vivero$IE ~ vivero$Tratamiento, col="grey", main="A")
+boxplot(vivero$IE ~ vivero$Tratamiento, col="green", main="A")
 barplot(tapply(vivero$IE, list(vivero$Tratamiento), mean ), beside=T, main="B")
 
 # Paried t-test -----------------------------------------------------------
@@ -41,4 +41,20 @@ test.tiempo <- t.test(vivero$IE ~ vivero$Tratamiento, paired=TRUE)
 test.tiempo
 
 
+# Ejercicio producción ----------------------------------------------------
+inventario <-read.csv("C:/MCF202-2019/Datos/produccion.csv", header = T)
+head(inventario)
 
+boxplot(inventario$Kgsem ~ inventario$Tiempo, col="green")
+t.test(inventario$Kgsem ~ inventario$Tiempo, paired = T)
+
+boxplot(inventario$Germ ~ inventario$Tiempo, col="green")
+t.test(inventario$Germ ~ inventario$Tiempo, paired = T)
+
+#T2012 <- subset(inventario, Tiempo == "T2012")
+#mean2012=mean(T2012$Germ)
+
+#T2013 <- subset(inventario, Tiempo == "T2013")
+#mean2013=mean(T2013$Germ)
+
+tapply(inventario$Germ, inventario$Tiempo, mean)
