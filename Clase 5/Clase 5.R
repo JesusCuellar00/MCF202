@@ -34,3 +34,8 @@ par(mfrow=c(2,2))
 TukeyHSD(aovsuelo, conf.level = 0.95)
 
 plot(TukeyHSD(aovsuelo))
+summary.lm(aovsuelo)
+
+#se acepta la hipótesis alternativa debido a que al menos
+#una media (en este caso entre la arcilla y la arena) tiene una diferencia significativa 
+
