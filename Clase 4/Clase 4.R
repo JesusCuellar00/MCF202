@@ -55,6 +55,32 @@ length(erupcion$eruptions)
 
 y.60<- -1.87+0.07*60
 y.60
+
+espera<- erupcion$waiting
+duracion<- erupcion$eruptions
+
+res<-resid(lm.erup)
+res
+sum(res)
+
+pre <- fitted(lm.erup)
+res.2 <- res^2
+cuadro<- round(data.frame(espera, duracion,pre,
+                    res, res.2), 4)
+
+SSE<- sum((duracion - pre)^2)
+SSE
+vari<- SSE/length((erupcion$eruptions)-2)
+vari
+
+
+# pureba hipotesis regresion ----------------------------------------------
+an.erup <- anova(lm.erup)
+an.erup
+
+#aceptamos la hipotesis alternativa que nos dice que
+# el modelo de regresion es significativo
+
 # Ejercicios ebanos -------------------------------------------------------
 
 ebanos <-read.csv("C:/MCF202-2019/Datos/ebanos.csv", header= T)
