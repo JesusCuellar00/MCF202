@@ -85,3 +85,4 @@ lm.eba
 summary(lm.eba)
 
 (0.82)^2
+
